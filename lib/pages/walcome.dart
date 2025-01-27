@@ -12,10 +12,11 @@ class _WelcomePageState extends State<WelcomePage> {
   void initState() {
     super.initState();
 
-    // Menunda navigasi ke halaman Login
-    Future.delayed(Duration(seconds: 3), () {
-      Get.toNamed(AppRoutes.LOGIN);
-    });
+    
+  Future.delayed(Duration(seconds: 3), () {
+  Get.offNamed(AppRoutes.LOGIN); 
+});
+
   }
 
   @override

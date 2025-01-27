@@ -1,18 +1,19 @@
 import 'package:frontend_wahyu/pages/walcome.dart';
-
 import 'package:get/get.dart';
-import '../pages/login.dart'; // Import untuk login jika ada
+import '../pages/login.dart'; 
 import '../pages/dashboard.dart';
-// import '../pages/profile_page.dart';
-// import '../pages/settings_page.dart';
+import '../pages/profile.dart';
+import '../pages/pertandingan.dart';
+import '../pages/ranking.dart';
+
 
 class AppRoutes {
   static const WELCOME = '/welcome';
   static const LOGIN = '/login';
   static const DASHBOARD = '/dashboard';
-  // static const HOME = '/home';
-  // static const PROFILE = '/profile';
-  // static const SETTINGS = '/settings';
+  static const PROFILE = '/profile';
+  static const PERTANDINGAN = '/pertandingan';
+  static const RANKING = '/ranking';
 
   static final routes = [
     GetPage(
@@ -22,24 +23,24 @@ class AppRoutes {
     GetPage(
       name: LOGIN,
       page: () => LoginPage(),
-      transition: Transition.fadeIn, // ngakalin transisi jadi di halaman welcome tinggal panggil aja moga ga ngaruh pas nyuntik beckend
-      transitionDuration: Duration(milliseconds: 800), // ngakalin transisi jadi di halaman welcome tinggal panggil aja moga ga ngaruh pas nyuntik beckend
+      transition: Transition.fadeIn, 
+      transitionDuration: Duration(milliseconds: 800), 
     ),
        GetPage(
       name: DASHBOARD,
-      page: () => DashboardPage(), // Rute untuk DashboardPage
+      page: () => DashboardPage(),
     ),
-    // GetPage(
-    //   name: HOME,
-    //   page: () => HomePage(),
-    // ),
-    // GetPage(
-    //   name: PROFILE,
-    //   page: () => ProfilePage(),
-    // ),
-    // GetPage(
-    //   name: SETTINGS,
-    //   page: () => SettingsPage(),
-    // ),
+      GetPage(
+      name: PROFILE,
+      page: () => ProfilePage(),
+    ),
+    GetPage(
+      name: PERTANDINGAN,
+      page: () => PertandinganPage(),
+    ),
+    GetPage(
+      name: RANKING,
+      page: () => RankingPage(),
+    ),
   ];
 }

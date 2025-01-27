@@ -31,7 +31,7 @@ class LoginPage extends StatelessWidget {
                   ),
                   Positioned(
                     top: 16,
-                    right: -12, 
+                    right: -15, 
                     child: Image.asset(
                       'assets/images/icon.png', 
                       width: screenWidth * 0.4, 
